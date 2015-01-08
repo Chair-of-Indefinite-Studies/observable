@@ -32,3 +32,22 @@ Model.prototype.bar = function(){
   this.signal('foo', 'bar was called');
 };
 ```
+
+API
+---
+
+`Observable` responds to the following API.
+
+### on
+
+Registers an observer for a specific signal.
+
+* **signal key** a `string` identifying a signal key.
+* **observer** a `function` that will be called when the signal key is signalled.
+
+### signal
+
+Signals oberservers of a signal key.
+
+* **signal key** a `string` identifying the signal key.
+* **arguments** (optional) a number of arguments that will be send to the observers.
